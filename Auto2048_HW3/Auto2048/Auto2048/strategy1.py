@@ -27,20 +27,31 @@ def readMap():
 
 
 
-def writeStep(_score_higher):
-	f = open(STEPS_FILE_NAME, "a")
-	res = random.randint(0, 1)
+def moveMonteCarlo(_currentMap):
+	if Debug:
+		print(str(_currentMap))
+	game=Grid(template=_currentMap)
+	Ai = Ai(multi_core=True)
+	choice=Ai.next_move(game,N_GAMES)
+	print("MonteChoice"+str(choice))
+	game.move(choice)
+	print(game)
+	return choice
 
-	if(_score_higher == UP_DOWN_SCORE_HIGHER):
-		if res == 0:
-			f.write('w')
-		elif res == 1:
-			f.write('s')
-	else:
-		if res == 0:
-			f.write('a')
-		elif res == 1:
-			f.write('d')
+def writeStep(_monteCarloMove):
+	f = open(STEPS_FILE_NAME, "a")
+
+
+	if_monteCarloMove ==Moves.UP:
+		
+		f.write('w')
+	elif monteCarloMove Moves.DOWN:
+		f.write('s')
+
+	if_monteCarloMove ==Moves.LEFT:
+		f.write('a')
+	elif monteCarloMove Moves.RIGHT:
+		f.write('d')
 	f.close()
 	return
 
@@ -82,4 +93,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+	main()

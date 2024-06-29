@@ -29,12 +29,10 @@ class AI:
 		return choices[0][0]
 
 
-
-
-
-
-
-
+	def init dict(self):
+		self.move_results = {}
+		for i in Moves:
+			self.move_results[i]=[]
 
 
 

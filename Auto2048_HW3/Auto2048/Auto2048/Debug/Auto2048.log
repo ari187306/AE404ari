@@ -1,1 +1,3 @@
-﻿  Auto2048.vcxproj -> C:\Users\ari99\Downloads\Auto2048_HW2 (1)\Auto2048\Debug\Auto2048.exe
+﻿  Auto2048.cpp
+C:\AE404ari\Auto2048_HW3\Auto2048\Auto2048\Auto2048.cpp(584,12): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+  Auto2048.vcxproj -> C:\AE404ari\Auto2048_HW3\Auto2048\Debug\Auto2048.exe
